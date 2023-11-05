@@ -138,7 +138,7 @@ export default function Home(){
    });
    setTimeout(() => {
       setShowCard(true);
-    }, 2000);
+    }, 4000);
  }, [userData]);
     return(   
         <main className=" min-h-screen  md:max-w-screen bg-[#10141E] text-white">
