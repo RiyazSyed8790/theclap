@@ -48,12 +48,12 @@ export default function Signup(){
           password: user.password
         })
         .then(function (response) {
-          console.log(response);
+        //  console.log(response);
           alert("Account created successfully! Redirecting to Login page...");
           window.location.pathname="/"
         })
         .catch(function (error) {
-          console.log(error);
+        //  console.log(error);
         }):console.log("Correct the form")//prints when form is invalid    
   }
 

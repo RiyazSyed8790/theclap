@@ -41,7 +41,7 @@ export default function Movies_Page(){
  const [query,setQuery] = React.useState("");
  function handleSearch(e: { target: { value: React.SetStateAction<string>; }; }){
    setQuery(e.target.value);
-   console.log(e.target.value);
+   //console.log(e.target.value);
  }
  function postQuery(){
    axios.get(
@@ -49,7 +49,7 @@ export default function Movies_Page(){
    `https://theclapserver.onrender.com/query/${query}`
    )
    .then(function(res){
-      console.log(res.data);
+     // console.log(res.data);
       setShowCard(false);
       setTimeout(function(){
          setVideo(res.data);//the below code is to check and convert isBookmarked to true
@@ -60,7 +60,7 @@ export default function Movies_Page(){
                 userData.book &&
                 (userData.book.movies.includes(videoItem.title) ||
                   userData.book.tv.includes(videoItem.title))
-              ) { console.log("I was here")
+              ) { //console.log("I was here")
                 // Create a new object with the updated 'isBookmarked' property
                 return {
                   ...videoItem,
@@ -74,7 +74,7 @@ export default function Movies_Page(){
       },3000)
    })
    .catch(function(err){
-      console.log(err);
+      //console.log(err);
    })
  }
 
@@ -84,11 +84,11 @@ export default function Movies_Page(){
     `https://theclapserver.onrender.com/users/${id}`
     )
         .then(function (res){
-            console.log(res);
+            //console.log(res);
             setUser(res.data)
           })
           .catch(function (error) {
-            console.log(error);
+           // console.log(error);
           })
           setPath(window.location.pathname.split("/")[2]);   
     //to get all video data
@@ -102,7 +102,7 @@ export default function Movies_Page(){
        setVideo(res.data);
      })
      .catch(function (error) {
-       console.log(error);
+       //console.log(error);
      })         
  },[id])
 const [showCard,setShowCard] = React.useState(false);

@@ -53,14 +53,14 @@ export default function Home(){
  const [query,setQuery] = React.useState("");
  function handleSearch(e: { target: { value: React.SetStateAction<string>; }; }){
    setQuery(e.target.value);
-   console.log(e.target.value);
+  // console.log(e.target.value);
  }
  function postQuery(){
    axios.get(
     // `http://localhost:3000/query/${query}` || for dev
     `https://theclapserver.onrender.com/query/${query}`)
    .then(function(res){
-      console.log(res.data);
+     // console.log(res.data);
       setShowCard(false);
       setTimeout(function(){
          setVideo(res.data);//the below code is to check and convert isBookmarked to true
@@ -71,7 +71,7 @@ export default function Home(){
                 userData.book &&
                 (userData.book.movies.includes(videoItem.title) ||
                   userData.book.tv.includes(videoItem.title))
-              ) { console.log("I was here")
+              ) {// console.log("I was here")
                 // Create a new object with the updated 'isBookmarked' property
                 return {
                   ...videoItem,
@@ -85,7 +85,7 @@ export default function Home(){
       },3000)
    })
    .catch(function(err){
-      console.log(err);
+    //  console.log(err);
    })
  }
 
@@ -101,7 +101,7 @@ export default function Home(){
             setVideo(res.data);
           })
           .catch(function (error) {
-            console.log(error);
+          //  console.log(error);
           })
    //to get user specific data, i.e: profilePic, bookmarks etc. 
    axios.get(
@@ -112,7 +112,7 @@ export default function Home(){
             setUser(res.data);
           })
           .catch(function (error) {
-            console.log(error);
+          //  console.log(error);
           })
     
    setPath(window.location.pathname.split("/")[2]);

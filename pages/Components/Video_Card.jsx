@@ -30,10 +30,10 @@ export default function Video_Card(props){
             type : catg 
           })
           .then(function (response) {
-            console.log(response);
+          //  console.log(response);
           })
           .catch(function (error) {
-            console.log(error);
+          //  console.log(error);
           })
         :
         axios.post(// 'http://localhost:3000/users/books' || for dev
@@ -43,10 +43,10 @@ export default function Video_Card(props){
             type : catg 
           })
           .then(function (response) {
-            console.log(response);
+          //  console.log(response);
           })
           .catch(function (error) {
-            console.log(error);
+          //  console.log(error);
           });
     }
   function handleEnter(){setCond(true)}

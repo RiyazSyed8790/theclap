@@ -57,7 +57,7 @@ export default function Page() {
               if(each.email===login.email && each.password===login.password){
                 setExist(true);
                 setId(each.id);
-                console.log("existed for", each.email, "with", each.password);
+                //console.log("existed for", each.email, "with", each.password);
               }
               else{
                 setShow(true);
@@ -66,7 +66,7 @@ export default function Page() {
             })
           })
           .catch(function (error) {
-            console.log(error);
+            //console.log(error);
           }):console.log("Correct the login data!")
   }
     return (

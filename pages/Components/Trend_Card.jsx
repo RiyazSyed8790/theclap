@@ -34,10 +34,10 @@ export default function Trend_Card(props){
           type : catg 
         })
         .then(function (response) {
-          console.log(response);
+         // console.log(response);
         })
         .catch(function (error) {
-          console.log(error);
+        //  console.log(error);
         })
       :
       axios.post(
@@ -48,10 +48,10 @@ export default function Trend_Card(props){
           type : catg 
         })
         .then(function (response) {
-          console.log(response);
+        //  console.log(response);
         })
         .catch(function (error) {
-          console.log(error);
+        //  console.log(error);
         });
   }
   function handleEnter(){setCond(true)}
