@@ -119,26 +119,29 @@ export default function Home(){
  },[id])
  React.useEffect(() => {
    // Update the 'isBookmarked' property for each video based on the condition
-   setVideo((prevVideo) => {
-     return prevVideo.map((videoItem) => {
-       if (
-         userData &&
-         userData.book &&
-         (userData.book.movies.includes(videoItem.title) ||
-           userData.book.tv.includes(videoItem.title))
-       ) { 
-         // Create a new object with the updated 'isBookmarked' property
-         return {
-           ...videoItem,
-           isBookmarked: true,
-         };
-       }
-       return videoItem;
-     });
-   });
+  setTimeout(function(){
+    setVideo((prevVideo) => {
+      return prevVideo.map((videoItem) => {
+        if (
+          userData &&
+          userData.book &&
+          (userData.book.movies.includes(videoItem.title) ||
+            userData.book.tv.includes(videoItem.title))
+        ) { 
+          // Create a new object with the updated 'isBookmarked' property
+          return {
+            ...videoItem,
+            isBookmarked: true,
+          };
+        }
+        return videoItem;
+      });
+    });
+  },2000) 
+   
    setTimeout(() => {
       setShowCard(true);
-    }, 4000);
+    }, 3000);
  }, [userData]);
     return(   
         <main className=" min-h-screen  md:max-w-screen bg-[#10141E] text-white">
