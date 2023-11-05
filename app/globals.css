@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +24,77 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.outfit{
+  font-family: 'Outfit', sans-serif;
+}
+/* #mail::after{
+  content: "Can't be empty";
+  width: 5rem;
+  aspect-ratio: 1;
+  font-size: 1.25rem;
+  color: #FC4747;
+  position: absolute;
+  right: 0; 
+} */
+
+@layer utilities{
+  .bord{
+    border: 2px solid black;
+  }
+  .whiteBord{
+    border:2px solid white;
+  }
+  .bot{
+    border-bottom: 2px solid #5A698F;
+  }
+  .trans:focus{
+    transform: scale(1.1);
+    transition: all ease-in-out 500ms;
+  }
+  .navs>svg{
+    margin: 0 0.5rem;
+  }
+  .navs-mobile>svg{
+    margin: 1rem 0;
+  }
+  .black_bag{
+    background: rgb(0,0,0,0.25);
+  }
+  .gray_bag{
+    background: rgb(90,105,143,0.25);
+  }
+  .gray_bag2{
+    background: rgba(231, 232, 235, 0.25);
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.skeleton{
+ animation: load 1s linear infinite alternate;
+}
+/* .skeleton2{
+  animation: load2 1s linear infinite alternate;
+} */
+@keyframes load{
+  0% {
+    background-color: #242830;
+  }
+  100% {
+    background-color: #10141E;
+  }
+}
+/* @keyframes load2{
+  0% {
+    background-color: #696c74;
+  }
+  100% {
+    background-color: #484c57;
+  }
+} */
 }
